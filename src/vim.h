@@ -243,7 +243,7 @@ private:
   std::string next;
   MotionState state;
   LastKeyState lastKeyState;
-  State *gState;
+  State *gState = nullptr;
 };
 
 #endif

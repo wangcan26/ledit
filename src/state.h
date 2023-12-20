@@ -34,13 +34,13 @@ public:
   bool cacheValid = false;
   GLuint sel_vao, sel_vbo;
   GLuint highlight_vao, highlight_vbo;
-  Cursor *cursor;
+  Cursor *cursor = nullptr;
   std::vector<CursorEntry *> cursors;
   size_t activeIndex;
   Highlighter highlighter;
   Provider provider;
   FontAtlas *atlas = nullptr;
-  GLFWwindow *window;
+  GLFWwindow *window = nullptr;
   ReplaceBuffer replaceBuffer;
   float WIDTH, HEIGHT;
   bool hasHighlighting;
@@ -58,7 +58,7 @@ public:
   int mode = 0;
   int round = 0;
   int fontSize;
-  Vim *vim;
+  Vim *vim = nullptr;
   State() {}
 
   void invalidateCache() { cacheValid = false; }
